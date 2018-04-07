@@ -11,19 +11,5 @@ Note that it does /not/ provide an introspection endpoint through `GET`, but you
 The only required header is `Client-ID`. For authenticated requests, use `Authorization: OAuth <oauth_token>`.
 
 
-A base dump of the schema is available in [schema.json](schema.json). It was generated using the following query:
-
-```graphql
-query {
-  __schema {
-    types {
-      name
-      kind
-      description
-      fields {
-        name
-      }
-    }
-  }
-}
-```
+A base dump of the schema is available in [schema.json](schema.json), generated using the official
+[IntrospectionQuery](https://github.com/graphql/graphql-js/blob/master/src/utilities/introspectionQuery.js).
