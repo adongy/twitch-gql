@@ -13,3 +13,15 @@ The only required header is `Client-ID`. For authenticated requests, use `Author
 
 A base dump of the schema is available in [schema.json](schema.json), generated using the official
 [IntrospectionQuery](https://github.com/graphql/graphql-js/blob/master/src/utilities/introspectionQuery.js).
+
+## Interesting tidbits
+
+Select the base types for query and mutation:
+
+```jq
+.data.__schema.types[] | select(.name == "Query")
+```
+
+```jq
+.data.__schema.types[] | select(.name == "Mutation")
+```

@@ -1,0 +1,1427 @@
+{
+  "kind": "OBJECT",
+  "name": "Query",
+  "description": "Root fields to access the Twitch API.",
+  "fields": [
+    {
+      "name": "badges",
+      "description": "A list of global chat badges.",
+      "args": [],
+      "type": {
+        "kind": "LIST",
+        "name": null,
+        "ofType": {
+          "kind": "OBJECT",
+          "name": "Badge",
+          "ofType": null
+        }
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "bitsOffers",
+      "description": "Gets a list of Bits offers for a logged out user, for use on the Bits landing page.",
+      "args": [],
+      "type": {
+        "kind": "LIST",
+        "name": null,
+        "ofType": {
+          "kind": "NON_NULL",
+          "name": null,
+          "ofType": {
+            "kind": "INTERFACE",
+            "name": "BitsOffer",
+            "ofType": null
+          }
+        }
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "channel",
+      "description": "Get a channel by ID or name.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "Channel",
+        "ofType": null
+      },
+      "isDeprecated": true,
+      "deprecationReason": "Use the 'user' query instead."
+    },
+    {
+      "name": "channels",
+      "description": "Get a list of channels, either by IDs or by their names.",
+      "args": [
+        {
+          "name": "ids",
+          "description": null,
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            }
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "names",
+          "description": null,
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "LIST",
+        "name": null,
+        "ofType": {
+          "kind": "OBJECT",
+          "name": "Channel",
+          "ofType": null
+        }
+      },
+      "isDeprecated": true,
+      "deprecationReason": "Use the 'users' query instead."
+    },
+    {
+      "name": "chatRoomBanStatus",
+      "description": "Get the ban status of a usser with respect to a channel's chat room.",
+      "args": [
+        {
+          "name": "channelID",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "userID",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ChatRoomBanStatus",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "clip",
+      "description": "Get a clip by slug.",
+      "args": [
+        {
+          "name": "slug",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "Clip",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "collection",
+      "description": "Get a single collection (playlist) item by its ID.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "options",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "CollectionOptions",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "Collection",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "community",
+      "description": "Get a single community by its ID or name\nWill error if both id and name are supplied.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "name",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "Community",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "currentUser",
+      "description": "The currently authenticated user.\nReturns null if the user is not authenticated.",
+      "args": [],
+      "type": {
+        "kind": "OBJECT",
+        "name": "User",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deprecatedEvent",
+      "description": "Get an Event by ID.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "INTERFACE",
+        "name": "DeprecatedEvent",
+        "ofType": null
+      },
+      "isDeprecated": true,
+      "deprecationReason": "Migratory field that clients who want to use the deprecated version of events can consume"
+    },
+    {
+      "name": "directories",
+      "description": "Fetch directories in specified sort order, optionally filtered to the specified type.\nFilters are additive, meaning that using two filters will include results from both types.\nAn empty filter list implies that no filters are applied, hence all results are included regardless of type.\nBy default returns 10, sorted by descending total viewer count, unfiltered.",
+      "args": [
+        {
+          "name": "first",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "defaultValue": "10"
+        },
+        {
+          "name": "after",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Cursor",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "sortBy",
+          "description": null,
+          "type": {
+            "kind": "ENUM",
+            "name": "DirectorySort",
+            "ofType": null
+          },
+          "defaultValue": "VIEWER_COUNT"
+        },
+        {
+          "name": "filterBy",
+          "description": null,
+          "type": {
+            "kind": "ENUM",
+            "name": "DirectoryFilter",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "filterBySet",
+          "description": null,
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "DirectoryFilter",
+                "ofType": null
+              }
+            }
+          },
+          "defaultValue": "[]"
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DirectoryConnection",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "directory",
+      "description": "Fetch a single directory by name and type.",
+      "args": [
+        {
+          "name": "name",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "type",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "ENUM",
+              "name": "DirectoryType",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "INTERFACE",
+        "name": "Directory",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "event",
+      "description": "Get an Event by ID.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "UNION",
+        "name": "Event",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "eventBroadcast",
+      "description": "Get an EventBraodcast by ID.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "EventBroadcast",
+        "ofType": null
+      },
+      "isDeprecated": true,
+      "deprecationReason": "Use the 'event' query instead."
+    },
+    {
+      "name": "extension",
+      "description": "Get an Extension by ID. Optionally, provide a specific version. If no version is provided,\nthe released version of that extension is returned.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "version",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "Extension",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "extensions",
+      "description": "Search extensions by text found in the Extension name, description or summary. The results are\nalways returned in order of popularity. By default, all RELEASED and IN_TEST extensions are returned.\nPass RELEASED as the value of 'state' to only return extensions in the RELEASED state.",
+      "args": [
+        {
+          "name": "first",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "defaultValue": "10"
+        },
+        {
+          "name": "after",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Cursor",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "search",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "state",
+          "description": null,
+          "type": {
+            "kind": "ENUM",
+            "name": "ExtensionStateFilter",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ExtensionConnection",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "featuredContentSections",
+      "description": "Fetch the sections & content that should be featured on mobile\n`language` is a letter code for the language the requesting user speaks (e.g. \"en\").",
+      "args": [
+        {
+          "name": "language",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "LIST",
+        "name": null,
+        "ofType": {
+          "kind": "NON_NULL",
+          "name": null,
+          "ofType": {
+            "kind": "OBJECT",
+            "name": "FeaturedContentSection",
+            "ofType": null
+          }
+        }
+      },
+      "isDeprecated": true,
+      "deprecationReason": "Subject to change"
+    },
+    {
+      "name": "featuredStreams",
+      "description": "Fetch streams that are featured on the front page, ordered by featurePriority ascending.\nDEPRECATED: `geolocation` is computed based on GeoIP with a fallback value of \"US\" and should be omitted\n`language` is a letter code for the language the requesting user speaks (ex. \"en\")\nBy default returns 6 streams.",
+      "args": [
+        {
+          "name": "first",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "defaultValue": "6"
+        },
+        {
+          "name": "geolocation",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "language",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "LIST",
+        "name": null,
+        "ofType": {
+          "kind": "OBJECT",
+          "name": "FeaturedStream",
+          "ofType": null
+        }
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "featuredVideos",
+      "description": "Fetch VODs that should be featured on the homepage\n`language` is a letter code for the language the requesting user speaks (e.g. \"en\").",
+      "args": [
+        {
+          "name": "first",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "defaultValue": "2"
+        },
+        {
+          "name": "language",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "LIST",
+        "name": null,
+        "ofType": {
+          "kind": "OBJECT",
+          "name": "FeaturedVideo",
+          "ofType": null
+        }
+      },
+      "isDeprecated": true,
+      "deprecationReason": "Subject to change"
+    },
+    {
+      "name": "feed",
+      "description": "Get a Feed by ID.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "Feed",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "feedEmbed",
+      "description": "Convert a URL to an object that can be embedded into Twitch feeds.",
+      "args": [
+        {
+          "name": "url",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "UNION",
+        "name": "FeedEmbed",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "feedItemContent",
+      "description": "Get a feed item by ID.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "UNION",
+        "name": "FeedItemContent",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "game",
+      "description": "Get a single game as identified by its name.",
+      "args": [
+        {
+          "name": "name",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "Game",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "games",
+      "description": "Fetch games in order of descending popularity.\nBy default returns 10.",
+      "args": [
+        {
+          "name": "first",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "defaultValue": "10"
+        },
+        {
+          "name": "after",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Cursor",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "GameConnection",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "merchandise",
+      "description": "Get a list of all Twitch Merch products.",
+      "args": [],
+      "type": {
+        "kind": "NON_NULL",
+        "name": null,
+        "ofType": {
+          "kind": "LIST",
+          "name": null,
+          "ofType": {
+            "kind": "OBJECT",
+            "name": "MerchandiseProduct",
+            "ofType": null
+          }
+        }
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "primeOffers",
+      "description": "Get Current PrimeOffers for a given region based on country code (request info or query param)\noptional dateOverride to provide offers that would be displayed on that date\noptional countryCode to provide offers that are displayed for that country\noptional locale to provide offers displayed for the supplied locale.",
+      "args": [
+        {
+          "name": "dateOverride",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Time",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "countryCode",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "locale",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "NON_NULL",
+        "name": null,
+        "ofType": {
+          "kind": "LIST",
+          "name": null,
+          "ofType": {
+            "kind": "OBJECT",
+            "name": "PrimeOffer",
+            "ofType": null
+          }
+        }
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "primePromotions",
+      "description": "PrimePromotions data - query supports optional identifiers for promotion strings but default behavior will use\ncountryCode and userID to find available marketing promotions. For whitelisted QA users dateOverride can be provided.",
+      "args": [
+        {
+          "name": "ids",
+          "description": null,
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            }
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "dateOverride",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Time",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "NON_NULL",
+        "name": null,
+        "ofType": {
+          "kind": "LIST",
+          "name": null,
+          "ofType": {
+            "kind": "OBJECT",
+            "name": "PrimePromotion",
+            "ofType": null
+          }
+        }
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "rejectedChatMessage",
+      "description": "Get a message rejected by chat.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "RejectedChatMessage",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "reportReasons",
+      "description": "Get a list of valid reasons for a content type.",
+      "args": [
+        {
+          "name": "content",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "ENUM",
+              "name": "ReportContentType",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "LIST",
+        "name": null,
+        "ofType": {
+          "kind": "NON_NULL",
+          "name": null,
+          "ofType": {
+            "kind": "OBJECT",
+            "name": "ReportReason",
+            "ofType": null
+          }
+        }
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "requestInfo",
+      "description": "Metadata about the request to the API.",
+      "args": [],
+      "type": {
+        "kind": "NON_NULL",
+        "name": null,
+        "ofType": {
+          "kind": "OBJECT",
+          "name": "RequestInfo",
+          "ofType": null
+        }
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "room",
+      "description": "Get a room by its ID.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "Room",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "streams",
+      "description": "Fetch live streams, ordered by the number of viewers descending.\nlanguages can be empty or null, which will imply all the languages are included on the results.",
+      "args": [
+        {
+          "name": "first",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "defaultValue": "10"
+        },
+        {
+          "name": "after",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Cursor",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "platformType",
+          "description": null,
+          "type": {
+            "kind": "ENUM",
+            "name": "PlatformType",
+            "ofType": null
+          },
+          "defaultValue": "all"
+        },
+        {
+          "name": "languages",
+          "description": null,
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "ENUM",
+                "name": "Language",
+                "ofType": null
+              }
+            }
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "StreamMetadataFilterInput",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "StreamConnection",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "subscriptionProduct",
+      "description": "Get a subscription product by its name. See product name examples below. The productName uniquely identifies a product.\n\ne.g. \"meclipse\", \"meclipse_2000\", \"meclipse_3000\", these are respectively, the tier 1, 2, and 3 subscription product\nnames for the user with login \"shroud\".",
+      "args": [
+        {
+          "name": "productName",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "String",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SubscriptionProduct",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "user",
+      "description": "Get a user by their ID or login.\nIf no ID or login is provided, null is returned.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "login",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "User",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "users",
+      "description": "Get a list of users, either by their logins or by their IDs.",
+      "args": [
+        {
+          "name": "ids",
+          "description": null,
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "ID",
+                "ofType": null
+              }
+            }
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "logins",
+          "description": null,
+          "type": {
+            "kind": "LIST",
+            "name": null,
+            "ofType": {
+              "kind": "NON_NULL",
+              "name": null,
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              }
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "LIST",
+        "name": null,
+        "ofType": {
+          "kind": "OBJECT",
+          "name": "User",
+          "ofType": null
+        }
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "video",
+      "description": "Get a video by its ID.\nBy default, Video queries only return public videos.\nIf the owner should also see their own private videos, set includePrivate flag in the `options` input.\nThis flag does not include other people's private videos.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "options",
+          "description": null,
+          "type": {
+            "kind": "INPUT_OBJECT",
+            "name": "VideoOptions",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "Video",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "videoComments",
+      "description": "A paginated list of comments against id, videoID, or channelID.",
+      "args": [
+        {
+          "name": "first",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "after",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Cursor",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "last",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "Before",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Cursor",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "videoID",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "channelID",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "String",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "VideoCommentConnection",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "videos",
+      "description": "Get a list of videos in order of descending popularity.",
+      "args": [
+        {
+          "name": "first",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Int",
+            "ofType": null
+          },
+          "defaultValue": "10"
+        },
+        {
+          "name": "after",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "Cursor",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "broadcastType",
+          "description": null,
+          "type": {
+            "kind": "ENUM",
+            "name": "BroadcastType",
+            "ofType": null
+          },
+          "defaultValue": null
+        },
+        {
+          "name": "language",
+          "description": null,
+          "type": {
+            "kind": "ENUM",
+            "name": "Language",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "VideoConnection",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "whisperThread",
+      "description": "Get a whisper thread by ID.",
+      "args": [
+        {
+          "name": "id",
+          "description": null,
+          "type": {
+            "kind": "SCALAR",
+            "name": "ID",
+            "ofType": null
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "WhisperThread",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    }
+  ],
+  "inputFields": null,
+  "interfaces": [],
+  "enumValues": null,
+  "possibleTypes": null
+}

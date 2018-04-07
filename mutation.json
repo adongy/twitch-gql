@@ -1,0 +1,3842 @@
+{
+  "kind": "OBJECT",
+  "name": "Mutation",
+  "description": "Operations to update data in the Twitch API.",
+  "fields": [
+    {
+      "name": "acceptFriendRequest",
+      "description": "acceptFriendRequest accepts a friend request from the target user to the authenticated user, creating a new Friend relationship.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "AcceptFriendRequestInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "AcceptFriendRequestPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "acceptProgramAgreement",
+      "description": "Accept program agreement during payout onboarding.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "AcceptProgramAgreementInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "AcceptProgramAgreementPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "activateExtension",
+      "description": "Activate an extension which has been installed on a channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ActivateExtensionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ActivateExtensionPayload",
+        "ofType": null
+      },
+      "isDeprecated": true,
+      "deprecationReason": "Should use applyExtensionActivations instead"
+    },
+    {
+      "name": "addBrowserPushSubscription",
+      "description": "addBrowserPushSubscription adds a browser push subscription for receiving browser (desktop) push notifications.\nThe client must retrieve the input fields from the browser's push notification API. Client's will\ncall this when the user opts-in. A browser push subscription is tied to a user's browser (device).\nTwitch will use these push subscriptions to send browser push notifications.\n\nSpec: https://www.w3.org/TR/push-api/#push-subscription.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "AddBrowserPushSubscriptionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "AddBrowserPushSubscriptionPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "addChannelBlockedTerm",
+      "description": "Adds a blocked term to a channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "AddChannelBlockedTermInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "AddChannelBlockedTermPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "addChannelPermittedTerm",
+      "description": "Adds a permitted term to a channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "AddChannelPermittedTermInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "AddChannelPermittedTermPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "addCollectionItem",
+      "description": "addCollectionItem adds an item to a collection.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "AddCollectionItemInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "AddCollectionItemPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "addReaction",
+      "description": "addReaction allows a user to create a reaction for any reactable item in a feed.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "AddReactionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "AddReactionPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "allowRejectedChatMessage",
+      "description": "Allows a message rejected on a channel chat.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "AllowRejectedChatMessageInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "AllowRejectedChatMessagePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "applyExtensionActivations",
+      "description": "Apply activation state to a subset of installed extensions. In order to deactivate an installed extension,\nsimply pass a null value in the anchor.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ApplyExtensionActivationsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ApplyExtensionActivationsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "banUserFromChatRoom",
+      "description": "Bans a user from chat room permanently or for an specified period of time.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "BanUserFromChatRoomInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "BanUserFromChatRoomPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "banUserFromCommunity",
+      "description": "banUserFromCommunity allows a user to ban another user from a community\nmust be the community owner or a moderator.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "BanUserFromCommunityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "BanUserFromCommunityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "banVideoCommenter",
+      "description": "banVideoCommenter bans a user from commenting on a video.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "BanVideoCommenterInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "BanVideoCommenterPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "blockUser",
+      "description": "Blocks target user from communicating with the current user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "BlockUserInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "BlockUserPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "cancelBounty",
+      "description": "cancelBounty allows a user to cancel a claimed bounty.\nIf the user has not met the requirements to cancel the bounty, an error will be returned.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CancelBountyInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CancelBountyPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "cancelFriendRequest",
+      "description": "cancelFriendRequest destroys a friend request relationship from the authenticated user to the target user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CancelFriendRequestInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CancelFriendRequestPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "cancelPayoutOnboardingWorkflow",
+      "description": "Cancel a current payout onboarding workflow.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CancelPayoutOnboardingWorkflowInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CancelPayoutOnboardingWorkflowPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "claimAllRewards",
+      "description": "claimAllRewards allows the current user to claim all rewards for a given campaign domain (e.g. Overwatch League).\nIf the domain does not exist an error will be returned.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ClaimAllRewardsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ClaimAllRewardsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "claimBounty",
+      "description": "claimBounty allows a user to claim a bounty from a campaign (e.g. Stream a Game Campaign).\nIf the user has not met the requirements to claim it, an error will be returned.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ClaimBountyInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ClaimBountyPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "claimMilestone",
+      "description": "claimMilestone allows the current user to claim a milestone for a campaign (e.g. Overwatch League).\nIf the user has not met the requirements to claim it, or the milestone does not exist an error will be returned.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ClaimMilestoneInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ClaimMilestonePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "claimPrimeOffer",
+      "description": "claimPrimeOffer allows a user to create their entitlement to the given offer/content.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ClaimPrimeOfferInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ClaimPrimeOfferPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "clearUnreadFriendRequests",
+      "description": "clearUnreadFriendRequests marks all friend requests for the authenticated user as read.",
+      "args": [],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ClearUnreadFriendRequestsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createClip",
+      "description": "createClip creates a new clip with the authenticated user as the curator.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateClipInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateClipPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createCollection",
+      "description": "createCollection creates a collection with a provided collection name.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateCollectionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateCollectionPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createCommunity",
+      "description": "createCommunity allows a user to create a community.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateCommunityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateCommunityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createCommunityImageUploadURL",
+      "description": "createCommunityImageUploadURL creates and returns a url to use on the client side to upload media images.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateCommunityImageUploadURLInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateCommunityImageUploadURLPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createDropImageUploadURL",
+      "description": "createDropImageUploadURL creates and returns a url to use on the client side to upload drops images.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateDropImageUploadURLInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateDropImageUploadURLPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createFriendRequest",
+      "description": "createFriendRequest creates a friend request relationship between the authenticated user and the target user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateFriendRequestInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateFriendRequestPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createPanel",
+      "description": "createPanel removes a panel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreatePanelInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreatePanelPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createPost",
+      "description": "createPost creates a new post.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreatePostInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreatePostPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createRoom",
+      "description": "Creates a new chatroom.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateRoomInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateRoomPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createSegmentEvent",
+      "description": "createSegmentEvent allows a user to create a Segment type event.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateSegmentEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateSegmentEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createSingleEvent",
+      "description": "createSingleEvent allows a user to create a Single type event.  The Single type describes generic,\nbasic, self-contained events that only occur once.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateSingleEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateSingleEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createTimetableEvent",
+      "description": "createTimetableEvent allows a user to create a Timetable type event.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateTimetableEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateTimetableEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createVideoComment",
+      "description": "createVideoComment creates a video comment.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateVideoCommentInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateVideoCommentPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "createVideoHighlight",
+      "description": "createVideoHighlight creates a video of type Highlight from an Archive type video.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "CreateVideoHighlightInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "CreateVideoHighlightPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deactivateExtension",
+      "description": "Deactivate an extension which has been installed on a channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeactivateExtensionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeactivateExtensionPayload",
+        "ofType": null
+      },
+      "isDeprecated": true,
+      "deprecationReason": "Should use applyExtensionActivations instead"
+    },
+    {
+      "name": "deleteChannelBlockedTerm",
+      "description": "Deletes a blocked term from a channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteChannelBlockedTermInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteChannelBlockedTermPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteChannelPermittedTerm",
+      "description": "Deletes a permitted term from a channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteChannelPermittedTermInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteChannelPermittedTermPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteClips",
+      "description": "deleteClips allows a user to delete clips by slugs, video id, or broadcast id.\nOnly the slug and id can be accessed from the list of deleted clips.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteClipsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteClipsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteCollection",
+      "description": "deleteCollection performs a delete on the collection with the provided ID.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteCollectionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteCollectionPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteEventCollection",
+      "description": "deleteEventCollection allows an authorized user to delete an event collection.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteEventCollectionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteEventCollectionPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteEventLeaf",
+      "description": "deleteEventLeaf allows an authorized user to delete an event leaf.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteEventLeafInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteEventLeafPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteNotification",
+      "description": "deleteNotification deletes an onsite notification of the authenticated user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteNotificationInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteNotificationPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deletePanel",
+      "description": "deletePanel removes a panel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeletePanelInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeletePanelPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deletePost",
+      "description": "deletePost deletes a old post.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeletePostInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeletePostPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteRoom",
+      "description": "Deletes a chatroom.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteRoomInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteRoomPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteRoomMessage",
+      "description": "Deletes an existing message in a chatroom.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteRoomMessageInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteRoomMessagePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteVideo",
+      "description": "deleteVideo performs a delete on the video with the provided ID.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteVideoInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteVideoPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteVideo",
+      "description": "deleteVideo performs a delete on the video with the provided ID.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DeleteVideoInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteVideoPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "deleteVideoComment",
+      "description": "deleteVideoComment performs a delete on the video comment with the provided comment ID.\nNOTE: this should use an input argument, not define the commentID right here.",
+      "args": [
+        {
+          "name": "commentID",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "SCALAR",
+              "name": "ID",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DeleteVideoCommentPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "denyRejectedChatMessage",
+      "description": "Denies a message rejected on a channel chat.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DenyRejectedChatMessageInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DenyRejectedChatMessagePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "dismissFriendRecommendation",
+      "description": "dismissFriendRecommendation removes a friend recommendation to the authenticated user without creating a friend\nrequest.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DismissFriendRecommendationInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DismissFriendRecommendationPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "dismissPinnedCheer",
+      "description": "dismissPinnedCheer allows a moderator to remove a pinned recent message or reset the top pinned messages.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DismissPinnedCheerInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DismissPinnedCheerPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "dismissPurchaseToken",
+      "description": "dismissPurchaseToken allows the current user to dismiss a purchase token notification without sharing in chat.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DismissPurchaseTokenInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DismissPurchaseTokenPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "dismissRitualToken",
+      "description": "Permanently dismiss a ritual token without redeeming it.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "DismissRitualTokenInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "DismissRitualTokenPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "editCommunity",
+      "description": "editCommunity allows a user to edit a community's settings\nmust be the community owner.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "EditCommunityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "EditCommunityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "editRoomMessage",
+      "description": "Edits an existing message in a chatroom.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "EditRoomMessageInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "EditRoomMessagePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "followCommunity",
+      "description": "followCommunity allows a user to follow a community.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "FollowCommunityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "FollowCommunityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "followDeprecatedEvent",
+      "description": "followDeprecatedEvent allows the currently authenticated user to follow an event.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "FollowEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "FollowDeprecatedEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "followEvent",
+      "description": "followEvent allows the currently authenticated user to follow an event.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "FollowEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "FollowEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "followGame",
+      "description": "followGame allows a user to follow a game.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "FollowGameInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "FollowGamePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "followUser",
+      "description": "followUser creates a follow relationship between the authenticated user and\nthe target user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "FollowUserInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "FollowUserPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "installExtension",
+      "description": "Install an extension onto a specific channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "InstallExtensionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "InstallExtensionPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "joinChannelRooms",
+      "description": "Joins the channel's chatrooms.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "JoinChannelRoomsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "JoinChannelRoomsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "leaveChannelRooms",
+      "description": "Leaves the channel's chatrooms.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "LeaveChannelRoomsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "LeaveChannelRoomsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "linkSSO",
+      "description": "Link a single sign-on (SSO) app to a user's account.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "LinkSSOInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "LinkSSOPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "modUser",
+      "description": "Make a user a moderator for a channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ModUserInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ModUserPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "openCrate",
+      "description": "openCrate allows an authenticated a user to open the specified Twitch Crate. The contents of the crate will be given\nto the user as part of this action. The specified crate must be owned by the requesting user.\nOtherwise, an error will be returned.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "OpenCrateInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "OpenCratePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "orderPanels",
+      "description": "orderPanels updates the sort order of the provided panels, the input must be a list of panel ids\nall of which are owned by the acting user otherwise the request will fail and a generic GraphQL\nerror will be returned.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "OrderPanelsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "OrderPanelsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "publishClip",
+      "description": "publishClip allows a user to permanently edit and update their default clip, viewable to the public.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "PublishClipInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "PublishClipPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "readNotifications",
+      "description": "readNotifications sets the read state to true for one or more onsite notifications of the authenticated user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ReadNotificationsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ReadNotificationsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "redeemRitualToken",
+      "description": "Redeem an available ritual token. Currently, tokens are redeemed by sending\na special message to a channel's chat.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "RedeemRitualTokenInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "RedeemRitualTokenPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "redeemTrueXAd",
+      "description": "redeemTrueXAd processes the result of watching an ad to earn bits.\nThis action can only be taken if an OAuth token is supplied with the request.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "RedeemTrueXAdInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "RedeemTrueXAdPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "registerPayoutInformation",
+      "description": "Register payout information during payout onboarding.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "RegisterPayoutInformationInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "RegisterPayoutInformationPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "rejectFriendRequest",
+      "description": "rejectFriendRequest destroys a friend request relationship from the target user to the authenticated user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "RejectFriendRequestInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "RejectFriendRequestPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "removeCollectionItem",
+      "description": "removeCollectionItem removes an item from a collection.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "RemoveCollectionItemInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "RemoveCollectionItemPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "removeReaction",
+      "description": "removeReaction removes a reaction created with addReaction.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "RemoveReactionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "RemoveReactionPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "reorderCollectionItem",
+      "description": "reorderCollectionItem reorders an item's position in a collection.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ReorderCollectionItemInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ReorderCollectionItemPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "reportContent",
+      "description": "reportContent allows a user to report content on the site as infringing of our terms of service.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ReportContentInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ReportContentPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "reportUserInCommunity",
+      "description": "reportUserInCommunity allows a user to report another user for violating a community's rules.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ReportUserInCommunityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ReportUserInCommunityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "reportVideoComment",
+      "description": "reportVideoComment reports a video comment identified by provided comment ID.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ReportVideoCommentInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ReportVideoCommentPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "reportWhisperThread",
+      "description": "Reports a whisper thread as spam.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ReportWhisperThreadInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ReportWhisperThreadPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "requestRitualToken",
+      "description": "Request a ritual token to be issued to the user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "RequestRitualTokenInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "RequestRitualTokenPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "sendCheer",
+      "description": "sendCheer sends a chat message that contains cheermotes. The message will\nbe processed, bits deducted from the authenticated user's balance, and then the\nmessage will be passed on to the chat service (client shouldn't send the message itself).\nThis action can only be taken if an OAuth token is supplied with the request.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SendCheerInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SendCheerPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "sendRoomMessage",
+      "description": "Sends a message to a chatroom.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SendRoomMessageInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SendRoomMessagePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "sendWhisper",
+      "description": "Sends a whisper message to the target user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SendWhisperInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SendWhisperPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "setAmendmentAcceptance",
+      "description": "setAmendmentAcceptance sets that the acting user has agreed to the given amendment type.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SetAmendmentAcceptanceInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SetAmendmentAcceptancePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "setChannelFeedEnabled",
+      "description": "Set value for channel_feed_enabled.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SetChannelFeedEnabledInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SetChannelFeedEnabledPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "setChannelNotificationSetting",
+      "description": "setChannelNotificationSetting allows a user to set a notification setting.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SetChannelNotificationSettingInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SetChannelNotificationSettingPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "setDefaultPaymentMethod",
+      "description": "Sets the default payment method for a user.\nCurrently supports the Zuora (credit card) and Recurly (credit card, Pay-with-Amazon, PayPal) payment providers\nThis is the final step of the payment method management flow. (User.paymentMethods -> User.paymentMethodConfigs -> this mutation).",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SetDefaultPaymentMethodInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SetDefaultPaymentMethodPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "setNotificationSetting",
+      "description": "setNotificationSetting allows a user to set a notification setting.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SetNotificationSettingInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SetNotificationSettingPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "setPreferredLanguageTag",
+      "description": "Set a user's preferred language tag.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SetPreferredLanguageTagInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SetPreferredLanguageTagPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "setSessionStatus",
+      "description": "setSessionStatus sets the user's status for this session, which influences how they appear (\"online\", \"idle\",\n\"watching SnarfyBobo\") to friends and related users. To maintain a session status, setSessionStatus needs to be sent\nperiodically. The amount of time your application should wait between these status heartbeats is included in the\nresponse payload.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SetSessionStatusInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SetSessionStatusPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "setUserResidence",
+      "description": "Set user's country of residence.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SetUserResidenceInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SetUserResidencePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "sharePurchaseTokenInChat",
+      "description": "sharePurchaseTokenInChat allows the current user to share a purchase token in the chat with a message.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SharePurchaseTokenInChatInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SharePurchaseTokenInChatPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "spendSubscriptionCredit",
+      "description": "Spend Twitch Prime monthly subscription credit.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "SpendSubscriptionCreditInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "SpendSubscriptionCreditPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "startPayoutOnboardingWorkflow",
+      "description": "Start a new payout onboarding workflow.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "StartPayoutOnboardingWorkflowInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "StartPayoutOnboardingWorkflowPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "timeoutUserFromCommunity",
+      "description": "timeoutUserFromCommunity allows a user to time out another user from a community\nmust be the community owner or a moderator.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "TimeoutUserFromCommunityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "TimeoutUserFromCommunityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "toggleRitualsEnabled",
+      "description": "toggleRitualsEnabled allows a user to toggle the rituals feature for their channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "ToggleRitualsEnabledInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ToggleRitualsEnabledPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "tosBanCommunity",
+      "description": "tosBanCommunity allows a Twitch admin to tos-ban a community from the site.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "TOSBanCommunityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "TOSBanCommunityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unbanUserFromChatRoom",
+      "description": "Removes a ban imposed on a user for an especified chat room.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnbanUserFromChatRoomInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnbanUserFromChatRoomPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unbanUserFromCommunity",
+      "description": "unbanUserFromCommunity allows a user to unban another user from a community\nmust be the community owner or a moderator.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnbanUserFromCommunityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnbanUserFromCommunityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unblockUser",
+      "description": "Removes block from target user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnblockUserInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnblockUserPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unfollowCommunity",
+      "description": "unfollowCommunity allows a user to unfollow a community.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnfollowCommunityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnfollowCommunityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unfollowDeprecatedEvent",
+      "description": "unfollowDeprecatedEvent allows the currently authenticated user to unfollow an event.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnfollowEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnfollowDeprecatedEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unfollowEvent",
+      "description": "unfollowEvent allows the currently authenticated user to unfollow an event.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnfollowEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnfollowEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unfollowGame",
+      "description": "unfollowGame allows a user to unfollow a game.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnfollowGameInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnfollowGamePayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unfollowUser",
+      "description": "unfollowUser destroys the follow relationship between the authenticated user and\nthe target user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnfollowUserInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnfollowUserPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unfriendUser",
+      "description": "unfriendUser destroys a friend relationship from the target user to the authenticated user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnfriendUserInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnfriendUserPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "uninstallExtension",
+      "description": "Uninstall an extension from a specific channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UninstallExtensionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UninstallExtensionPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unlinkSSO",
+      "description": "Unlink an SSO app from a user's account.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnlinkSSOInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnlinkSSOPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unmodUser",
+      "description": "Remove moderator status from a user in a channel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnmodUserInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnmodUserPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "unsubscribeEmail",
+      "description": "unsubscribeEmail unsubscribes a given user from a given email campaign.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UnsubscribeEmailInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UnsubscribeEmailPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "untimeoutUserFromCommunity",
+      "description": "untimeoutUserFromCommunity allows a user to un-time out another user from a community\nmust be the community owner or a moderator.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UntimeoutUserFromCommunityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UntimeoutUserFromCommunityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateAllWhisperThreads",
+      "description": "Updates all of a user's whisper threads.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateAllWhisperThreadsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateAllWhisperThreadsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateAutoModProperties",
+      "description": "Set individual automod categories (i.e. set identity to level 3 but profanity to 0).",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateAutoModPropertiesInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateAutoModPropertiesPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateBroadcastSettings",
+      "description": "updateBroadcastSettings allows the user to update their broadcast setting.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateBroadcastSettingsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateBroadcastSettingsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateChatColor",
+      "description": "Updates a user's chat color.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateChatColorInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateChatColorPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateChatSettings",
+      "description": "Set different chat settings (i.e. disable globalBannedWordsOptOut).",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateChatSettingsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateChatSettingsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateCheerPartnerSettings",
+      "description": "Update the user's partner settings regarding bits.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateCheerPartnerSettingsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateCheerPartnerSettingsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateClip",
+      "description": "updateClip allows a user to update the metadata of a clip.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateClipInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateClipPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateClipViewCount",
+      "description": "updateClipViewCount allows a user to increment the viewcount of a clip.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateClipViewCountInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateClipViewCountPayload",
+        "ofType": null
+      },
+      "isDeprecated": true,
+      "deprecationReason": "Will eventually be replaced by different viewcounting method"
+    },
+    {
+      "name": "updateCollection",
+      "description": "updateCollection performs an update on the collection with the provided ID and updated attributes.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateCollectionInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateCollectionPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateEventBroadcastNotifications",
+      "description": "updateEventBroadcastNotifications allows a user to update their notification settings for a given\nEventBroadcast.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateEventBroadcastNotificationsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateEventBroadcastNotificationsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateIsSharingActivity",
+      "description": "Changes the user's activity sharing setting. A user's activity is one part of their status.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateIsSharingActivityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateIsSharingActivityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateOnboardingSkippedChannels",
+      "description": "updateOnboardingSkippedChannels updates skipped channel IDs during onboarding for a given user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateOnboardingSkippedChannelsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateOnboardingSkippedChannelsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updatePanel",
+      "description": "updatePanel updates the data for a given panel.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdatePanelInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdatePanelPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updatePremiereEvent",
+      "description": "updatePremiereEvent allows a user to update a Premiere type event.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdatePremiereEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdatePremiereEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updatePrimeSettings",
+      "description": "updatePrimeSettings allows the user to enable or disable chat notifications when spending a Prime Credit,\nand allows the user to set the type of Smilies (Turbos, Robots, or Monkeys) they want for Prime/Turbo Emoticons.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdatePrimeSettingsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdatePrimeSettingsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateRoom",
+      "description": "Updates an existing chatroom.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateRoomInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateRoomPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateRoomModes",
+      "description": "Updates the room modes (slow mode, emotes only mode, etc.) for the room.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateRoomModesInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateRoomModesPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateRoomView",
+      "description": "Update's a user's room view for a chatroom.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateRoomViewInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateRoomViewPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateSegmentEvent",
+      "description": "updateSegmentEvent allows a user to update a Segment type event.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateSegmentEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateSegmentEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateSingleEvent",
+      "description": "updateSingleEvent allows a user to update a Single type event.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateSingleEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateSingleEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateSubscriptionProduct",
+      "description": "updateSubscriptionProduct allows a user to update their subscription product settings.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateSubscriptionProductInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateSubscriptionProductPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateTimetableEvent",
+      "description": "updateTimetableEvent allows a user to update a Timetable type event.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateTimetableEventInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateTimetableEventPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateUserDirectoryHidden",
+      "description": "Set a user's directory hidden field.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateUserDirectoryHiddenInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateUserDirectoryHiddenPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateUserSubscriptionSettings",
+      "description": "updateUserSubscriptionSettings updates the subscription preferences for the authenticated user.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateUserSubscriptionSettingsInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateUserSubscriptionSettingsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateVideoComment",
+      "description": "updateVideoComment updates a video comment identified by provided comment ID.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateVideoCommentInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateVideoCommentPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateVisibility",
+      "description": "Changes the user's visibility setting. This is an account-level setting that will cause the user's availability to\nappear differently to other users, despite what sessions are reporting. See the VisibilityInput enum for details on\nthe effects of each value.\n\nBecause this is an account-level setting, it should only be used in response to the user expressing clear intention\nto change their visibility. Setting a status for an individual session should be done using setSessionStatus.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateVisibilityInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateVisibilityPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "updateWhisperThread",
+      "description": "Updates a whisper thread.",
+      "args": [
+        {
+          "name": "input",
+          "description": null,
+          "type": {
+            "kind": "NON_NULL",
+            "name": null,
+            "ofType": {
+              "kind": "INPUT_OBJECT",
+              "name": "UpdateWhisperThreadInput",
+              "ofType": null
+            }
+          },
+          "defaultValue": null
+        }
+      ],
+      "type": {
+        "kind": "OBJECT",
+        "name": "UpdateWhisperThreadPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    },
+    {
+      "name": "viewedNotifications",
+      "description": "viewedNotifications updates when the authenticated user last saw onsite notifications.",
+      "args": [],
+      "type": {
+        "kind": "OBJECT",
+        "name": "ViewedNotificationsPayload",
+        "ofType": null
+      },
+      "isDeprecated": false,
+      "deprecationReason": null
+    }
+  ],
+  "inputFields": null,
+  "interfaces": [],
+  "enumValues": null,
+  "possibleTypes": null
+}
