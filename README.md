@@ -1,4 +1,9 @@
+# Note
+
+This repository is only for research purposes and does not accept further contributions.
+
 # GQL
+
 
 Twitch is now exposing a GraphQL API.
 
